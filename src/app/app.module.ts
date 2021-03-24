@@ -16,6 +16,7 @@ import {MainBlockComponent} from './main/main-block/main-block.component';
 import {MatInputModule} from '@angular/material/input';
 import {MainSearchComponentComponent} from './main/main-search-component/main-search-component.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MainOrderBlockComponent } from './main/main-order-block/main-order-block.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         AuthComponent,
         MainBlockComponent,
         MainSearchComponentComponent,
+        MainOrderBlockComponent,
     ],
     imports: [
         BrowserModule,

@@ -2,11 +2,14 @@
     <h1>Today Menu 🥳</h1>
 
     <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-        <div>
-            <input id="name" type="text" formControlName="name" class="search-form-field">
+        <label for="name">
+        </label>
+        <div class="search-form-field">
+            <input id="name" type="text" formControlName="name" placeholder="{{value}}">
+            <button class="search-form-btn" type="submit">
+                <mat-icon>search</mat-icon>
+            </button>
         </div>
-
-        <button class="button" type="submit" hidden>Purchase</button>
 
     </form>
 </div>

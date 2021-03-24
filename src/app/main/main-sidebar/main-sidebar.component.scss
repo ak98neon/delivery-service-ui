@@ -1,7 +1,10 @@
 .main-sidenav-container {
+    width: 100%;
     height: 100%;
+    display: flex;
 
     .main-sidenav-elements {
+        background: #fff;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
