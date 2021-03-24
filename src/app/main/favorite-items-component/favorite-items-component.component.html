@@ -1,0 +1,29 @@
+<div class="favorite-items-container">
+
+    <div class="item-tile"
+         *ngFor="let item of items">
+
+        <div class="images">
+            <div class="favorite-item-img" [ngStyle]="{backgroundImage: item.imgUrl}">
+            </div>
+            <div class="favorite-rating-img" [ngStyle]="{backgroundImage: item.ratingImgUrl}">
+            </div>
+        </div>
+
+        <div class="item-tile-content">
+            <div class="info-item">
+                <div class="meta">
+                    <p>{{item.name}}</p>
+                    <p>{{item.rating}}</p>
+                    <p>${{item.price}}</p>
+                </div>
+                <div class="favorite-btn-add-wrapper">
+                    <button type="submit" class="favorite-btn-add">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -17,6 +17,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MainSearchComponentComponent} from './main/main-search-component/main-search-component.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainOrderBlockComponent } from './main/main-order-block/main-order-block.component';
+import { ManuComponentComponent } from './main/manu-component/manu-component.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { FavoriteItemsComponentComponent } from './main/favorite-items-component/favorite-items-component.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +32,8 @@ import { MainOrderBlockComponent } from './main/main-order-block/main-order-bloc
         MainBlockComponent,
         MainSearchComponentComponent,
         MainOrderBlockComponent,
+        ManuComponentComponent,
+        FavoriteItemsComponentComponent,
     ],
     imports: [
         BrowserModule,
@@ -39,7 +44,8 @@ import { MainOrderBlockComponent } from './main/main-order-block/main-order-bloc
         MatButtonModule,
         FormsModule,
         MatInputModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatGridListModule
     ],
     providers: [],
     bootstrap: [AppComponent]

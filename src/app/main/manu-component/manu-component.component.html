@@ -1,0 +1,34 @@
+<div class="menu-component-container">
+    <div class="menu-row">
+        <h2>Menu Category 🍕</h2>
+
+        <div class="view-all-wrapper">
+            <p>View All</p>
+            <div class="view-all-btn-wrapper">
+                <button type="submit" class="view-all-btn">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <mat-grid-list cols="6" rowHeight="150px" class="menu-grid-items">
+        <mat-grid-tile class="menu-grid-tile-item"
+                       *ngFor="let tile of tiles"
+                       [colspan]="tile.cols"
+                       [rowspan]="tile.rows"
+                       [style.background]="'#fb9405'">
+            <div class="item-content">
+                <div class="item-img-wrapper">
+                    <img class="item-img" alt="food" src="{{tile.imgUrl}}"/>
+                </div>
+                <p style="font-weight: bold">{{tile.text}}</p>
+                <div class="food-btn-wrapper">
+                    <button type="submit" class="food-forward-btn">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
