@@ -1,0 +1,12 @@
+<div class="main-search-container">
+    <h1>Today Menu 🥳</h1>
+
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div>
+            <input id="name" type="text" formControlName="name" class="search-form-field">
+        </div>
+
+        <button class="button" type="submit" hidden>Purchase</button>
+
+    </form>
+</div>

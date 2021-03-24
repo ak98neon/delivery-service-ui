@@ -9,6 +9,13 @@ import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {AuthComponent} from './auth/auth.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MainBlockComponent} from './main/main-block/main-block.component';
+import {MatInputModule} from '@angular/material/input';
+import {MainSearchComponentComponent} from './main/main-search-component/main-search-component.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,12 +24,20 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         MainSidebarComponent,
         LoginComponent,
         RegisterComponent,
-        AuthComponent
+        AuthComponent,
+        MainBlockComponent,
+        MainSearchComponentComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatButtonModule,
+        FormsModule,
+        MatInputModule,
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
