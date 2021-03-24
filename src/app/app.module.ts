@@ -20,6 +20,9 @@ import { MainOrderBlockComponent } from './main/main-order-block/main-order-bloc
 import { ManuComponentComponent } from './main/manu-component/manu-component.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FavoriteItemsComponentComponent } from './main/favorite-items-component/favorite-items-component.component';
+import { UserInfo } from './cab/user-info.component/user-info.component.component';
+import { UserCard } from './cab/user-card.component/user-card.component.component';
+import { OrderList } from './cab/order-list.component/order-list.component.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +37,9 @@ import { FavoriteItemsComponentComponent } from './main/favorite-items-component
         MainOrderBlockComponent,
         ManuComponentComponent,
         FavoriteItemsComponentComponent,
+        UserInfo.ComponentComponent,
+        UserCard.ComponentComponent,
+        OrderList.ComponentComponent,
     ],
     imports: [
         BrowserModule,
