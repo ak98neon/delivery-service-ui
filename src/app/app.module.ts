@@ -16,13 +16,13 @@ import {MainBlockComponent} from './main/main-block/main-block.component';
 import {MatInputModule} from '@angular/material/input';
 import {MainSearchComponentComponent} from './main/main-search-component/main-search-component.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MainOrderBlockComponent } from './main/main-order-block/main-order-block.component';
-import { ManuComponentComponent } from './main/manu-component/manu-component.component';
+import {MainOrderBlockComponent} from './main/main-order-block/main-order-block.component';
+import {ManuComponentComponent} from './main/manu-component/manu-component.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { FavoriteItemsComponentComponent } from './main/favorite-items-component/favorite-items-component.component';
-import { UserInfo } from './cab/user-info.component/user-info.component.component';
-import { UserCard } from './cab/user-card.component/user-card.component.component';
-import { OrderList } from './cab/order-list.component/order-list.component.component';
+import {FavoriteItemsComponentComponent} from './main/favorite-items-component/favorite-items-component.component';
+import {UserInfoComponent} from './main/cab/user-info.component/user-info.component';
+import {UserCardComponent} from './main/cab/user-card.component/user-card.component';
+import {OrderListComponent} from './main/cab/order-list.component/order-list.component';
 
 @NgModule({
     declarations: [
@@ -37,9 +37,9 @@ import { OrderList } from './cab/order-list.component/order-list.component.compo
         MainOrderBlockComponent,
         ManuComponentComponent,
         FavoriteItemsComponentComponent,
-        UserInfo.ComponentComponent,
-        UserCard.ComponentComponent,
-        OrderList.ComponentComponent,
+        UserInfoComponent,
+        UserCardComponent,
+        OrderListComponent,
     ],
     imports: [
         BrowserModule,
