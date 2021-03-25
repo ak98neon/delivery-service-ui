@@ -105,8 +105,9 @@
     .checkout-block {
         margin-top: 15px;
         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 45px;
-        width: 100%;
         display: flex;
         justify-content: center;
 
