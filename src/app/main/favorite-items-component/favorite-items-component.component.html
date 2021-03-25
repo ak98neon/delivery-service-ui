@@ -14,7 +14,12 @@
             <div class="info-item">
                 <div class="meta">
                     <p>{{item.name}}</p>
-                    <p>{{item.rating}}</p>
+                    <div class="rating-container">
+                        <div *ngFor="let item of createRange(item.rating)">
+                            <div class="favorite-img" [ngStyle]="{backgroundImage: 'url(assets/icons/ratings/star.png)'}">
+                            </div>
+                        </div>
+                    </div>
                     <p>${{item.price}}</p>
                 </div>
                 <div class="favorite-btn-add-wrapper">

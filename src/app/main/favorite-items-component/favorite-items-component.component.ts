@@ -30,14 +30,14 @@ export class FavoriteItemsComponentComponent implements OnInit {
             name: 'Mushroom Pizza',
             imgUrl: 'url(assets/img/transparent-pizza.png)',
             price: 7.49,
-            rating: 5,
+            rating: 3,
             ratingImgUrl: 'url(assets/icons/ratings/hot.png)'
         },
         {
             name: 'Mushroom Pizza',
             imgUrl: 'url(assets/img/transparent-pizza.png)',
             price: 7.49,
-            rating: 5,
+            rating: 4,
             ratingImgUrl: 'url(assets/icons/ratings/star.png)'
         }
     ];
@@ -45,4 +45,13 @@ export class FavoriteItemsComponentComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    // tslint:disable-next-line:typedef variable-name
+    createRange(number: number) {
+        // tslint:disable-next-line:prefer-const
+        let items: number[] = [];
+        for (let i = 1; i <= number; i++) {
+            items.push(i);
+        }
+        return items;
+    }
 }

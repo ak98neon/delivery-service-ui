@@ -64,6 +64,20 @@
                     p {
                         margin: 0 0 4px;
                     }
+
+                    .rating-container {
+                        display: flex;
+
+                        .favorite-img {
+                            width: 10px;
+                            height: 10px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                            margin-right: 5px;
+                            margin-bottom: 5px;
+                        }
+                    }
                 }
 
                 .favorite-btn-add-wrapper {
