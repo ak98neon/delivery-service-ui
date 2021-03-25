@@ -23,6 +23,7 @@ import {FavoriteItemsComponentComponent} from './main/favorite-items-component/f
 import {UserInfoComponent} from './main/cab/user-info.component/user-info.component';
 import {UserCardComponent} from './main/cab/user-card.component/user-card.component';
 import {OrderListComponent} from './main/cab/order-list.component/order-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [
@@ -51,7 +52,8 @@ import {OrderListComponent} from './main/cab/order-list.component/order-list.com
         FormsModule,
         MatInputModule,
         ReactiveFormsModule,
-        MatGridListModule
+        MatGridListModule,
+        NgbModule
     ],
     providers: [],
     bootstrap: [AppComponent]
