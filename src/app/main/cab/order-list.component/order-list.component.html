@@ -23,7 +23,9 @@
             <div class="order-info">
                 <div class="order-title">
                     <p>{{item.name}}</p>
-                    <p>x {{item.count}}</p>
+                    <p>
+                        <a class="cancel-order-link">x</a> {{item.count}}
+                    </p>
                 </div>
                 <div class="order-price-wrapper">
                     <p>${{item.price}}</p>
@@ -34,7 +36,7 @@
 
     <div class="checkout-block">
         <div class="checkout-btn-wrapper">
-            <button type="submit" class="checkout-btn">
+            <button type="submit" class="checkout-btn btn-white btn-animated">
                 Checkout
             </button>
         </div>
