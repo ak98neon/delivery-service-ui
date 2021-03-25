@@ -1,1 +1,42 @@
-<p>order-list.component works!</p>
+<div class="order-list-container">
+    <div class="menu-row">
+        <h2>Order Menu</h2>
+
+        <div class="view-all-wrapper">
+            <p>View All</p>
+            <div class="view-all-btn-wrapper">
+                <button type="submit" class="view-all-btn">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-list-wrapper">
+        <div class="order-tile"
+             *ngFor="let item of orderList">
+
+            <div class="order-img-button-wrapper">
+                <div class="order-img" [ngStyle]="{backgroundImage: item.imgUrl}"></div>
+            </div>
+
+            <div class="order-info">
+                <div class="order-title">
+                    <p>{{item.name}}</p>
+                    <p>x {{item.count}}</p>
+                </div>
+                <div class="order-price-wrapper">
+                    <p>${{item.price}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-block">
+        <div class="checkout-btn-wrapper">
+            <button type="submit" class="checkout-btn">
+                Checkout
+            </button>
+        </div>
+    </div>
+</div>
