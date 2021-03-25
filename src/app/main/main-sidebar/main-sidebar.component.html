@@ -3,7 +3,7 @@
         <div class="common-buttons">
             <div class="main-sidenav-button-container">
                 <button mat-fab aria-label="Home Icon" class="home-sidenav-btn">
-                    <a routerLink="/">
+                    <a routerLink="/" routerLinkActive="active">
                         <img class="home-btn-icon" src="assets/icons/home.png"/>
                     </a>
                 </button>
@@ -42,7 +42,9 @@
 
         <div class="main-sidenav-button-container">
             <button mat-mini-fab aria-label="Exit Icon" class="sidenav-btn">
-                <img class="menu-icon" src="assets/icons/menu/exit.png"/>
+                <a routerLink="/login" routerLinkActive="active">
+                    <img class="menu-icon" src="assets/icons/menu/exit.png"/>
+                </a>
             </button>
         </div>
     </div>
