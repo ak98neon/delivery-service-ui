@@ -1,10 +1,16 @@
 import {Component, OnInit} from '@angular/core';
+import {IProduct} from '../../shared/IProduct';
+import {ProductService} from '../../service/product.service';
 
 export interface Tile {
     cols: number;
     rows: number;
     text: string;
     imgUrl: string;
+}
+
+function productsToProductTiles(product: IProduct): Tile {
+    return {cols: 1, rows: 1, imgUrl: product.imgUrl, text: product.name};
 }
 
 @Component({
@@ -14,19 +20,15 @@ export interface Tile {
 })
 export class ManuComponentComponent implements OnInit {
 
-    constructor() {
+    productsMenu: Tile[];
+
+    constructor(private productService: ProductService) {
+        this.productsMenu = [];
     }
 
-    tiles: Tile[] = [
-        {text: 'Pizza', cols: 1, rows: 1, imgUrl: 'assets/icons/food/pizza.png'},
-        {text: 'Burger', cols: 1, rows: 1, imgUrl: 'assets/icons/food/hamburger.png'},
-        {text: 'Hotdog', cols: 1, rows: 1, imgUrl: 'assets/icons/food/hotdog.png'},
-        {text: 'Taco', cols: 1, rows: 1, imgUrl: 'assets/icons/food/taco.png'},
-        {text: 'Snack', cols: 1, rows: 1, imgUrl: 'assets/icons/food/snacks.png'},
-        {text: 'Drink', cols: 1, rows: 1, imgUrl: 'assets/icons/food/juice.png'},
-    ];
-
     ngOnInit(): void {
+        this.productService.fetchTopProducts()
+            .subscribe(products => this.productsMenu = products.map(product => productsToProductTiles(product)));
     }
 
 }
