@@ -1,3 +1,31 @@
 <div class="user-card-container">
-    <div class="user-card-img" [ngStyle]="{backgroundImage: 'url(assets/icons/debit_card_web.png)'}">
+    <div class="card">
+        <div class="card__front card__part">
+            <div class="card-firs-line-icons">
+                <img class="card__front-square card__square" src="assets/icons/card/visa-logo.png">
+                <img class="card__front-logo card__logo" src="assets/icons/card/nfc.png">
+            </div>
+            <p class="card_numer">{{cardNumber}}</p>
+            <div class="card__space-75">
+                <span class="card__label">Card holder</span>
+                <p class="card__info">{{cardHolder}}</p>
+            </div>
+            <div class="card__space-25">
+                <span class="card__label">Expires</span>
+                <p class="card__info">{{expires}}</p>
+            </div>
+        </div>
+
+        <div class="card__back card__part">
+            <div class="card__black-line"></div>
+            <div class="card__back-content">
+                <div class="card__secret">
+                    <p class="card__secret--last">{{secretCode}}</p>
+                </div>
+                <img class="card__back-square card__square" src="assets/icons/profile.png">
+
+            </div>
+        </div>
+
+    </div>
 </div>
