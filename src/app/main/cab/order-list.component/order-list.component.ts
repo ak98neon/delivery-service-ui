@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {OrderListService} from '../../../service/order.list.service.service';
 
 export interface Order {
     name: string;
@@ -14,16 +15,15 @@ export interface Order {
 })
 export class OrderListComponent implements OnInit {
 
-    constructor() {
+    orderList: Order[] = [];
+    totalPrice = 0;
+
+    constructor(private orderService: OrderListService) {
     }
 
-    orderList: Order[] = [
-        {name: 'Mushroom Pizza', count: 1, price: 7.99, imgUrl: 'url(assets/img/transparent-pizza.png)'},
-        {name: 'Mushroom Pizza', count: 1, price: 7.99, imgUrl: 'url(assets/img/transparent-pizza.png)'},
-        {name: 'Mushroom Pizza', count: 1, price: 7.99, imgUrl: 'url(assets/img/transparent-pizza.png)'}
-    ];
-
     ngOnInit(): void {
+        // this.orderService.fetchUserOrders()
+        //     .subscribe(orders => this.orderList = orders.map(product => productsToProductTiles(product)));
     }
 
 }

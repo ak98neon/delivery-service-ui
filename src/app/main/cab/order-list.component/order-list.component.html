@@ -12,33 +12,50 @@
         </div>
     </div>
 
-    <div class="order-list-wrapper">
-        <div class="order-tile"
-             *ngFor="let item of orderList">
+    <div>
+        <div class="order-list-wrapper"
+             *ngIf="orderList.length > 0; else elseBlock">
 
-            <div class="order-img-button-wrapper">
-                <div class="order-img" [ngStyle]="{backgroundImage: item.imgUrl}"></div>
-            </div>
+            <div class="order-tile"
+                 *ngFor="let item of orderList">
 
-            <div class="order-info">
-                <div class="order-title">
-                    <p>{{item.name}}</p>
-                    <p>
-                        <a class="cancel-order-link">x</a> {{item.count}}
-                    </p>
+                <div class="order-img-button-wrapper">
+                    <div class="order-img" [ngStyle]="{backgroundImage: item.imgUrl}"></div>
                 </div>
-                <div class="order-price-wrapper">
-                    <p>${{item.price}}</p>
+
+                <div class="order-info">
+                    <div class="order-title">
+                        <p>{{item.name}}</p>
+                        <p>
+                            <a class="cancel-order-link">x</a> {{item.count}}
+                        </p>
+                    </div>
+                    <div class="order-price-wrapper">
+                        <p>${{item.price}}</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <ng-template #elseBlock>
+            <div>
+                <p class="no-orders-title">No Orders</p>
+            </div>
+        </ng-template>
     </div>
 
     <div class="checkout-block">
         <div class="checkout-btn-wrapper">
-            <button type="submit" class="checkout-btn btn-white btn-animated">
+            <button type="submit" class="checkout-btn btn-white btn-animated"
+                    *ngIf="orderList.length > 0; else elseCheckoutButton">
                 Checkout
             </button>
+
+            <ng-template #elseCheckoutButton>
+                <button type="submit" class="checkout-btn btn-white btn-animated" disabled>
+                    No orders
+                </button>
+            </ng-template>
         </div>
     </div>
 </div>
